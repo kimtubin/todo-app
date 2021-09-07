@@ -1,39 +1,50 @@
 .App {
+  background-color: #5f506b;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  place-content: center;
+  color: white;
+}
+
+.App h1 {
+  font-size: 3rem;
   text-align: center;
+  padding-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-container {
+  background-color: #fff8f0;
+  padding: 20px;
+  border-radius: 20px;
+  height: fit-content;
+  display: grid;
+  grid-gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.todo-item {
+  background: #5f506b;
+  border-radius: 20px;
+  padding: 20px;
+  width: 40vw;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 5fr 0.5fr 0.5fr;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo-item input {
+  outline: none;
+  border: none;
+  background-color: #5f506b;
+  border-bottom: 1px solid white;
+  color: white;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.todo-item input::placeholder {
+  color: white;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.todo-item .icon:hover {
+  cursor: pointer;
 }
